@@ -1,0 +1,35 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="{{ site.baseurl }}/" class="footer-logo">OSINT & Social Engineering</a>
+        <p>Research into open source intelligence techniques, social engineering attack patterns, and human vulnerability — by Amritesh.</p>
+        <div class="footer-regions">
+          <span>US</span><span>UK</span><span>DE</span><span>NL</span><span>Nordic</span>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <h4>Research Hub</h4>
+        <ul>
+          <li><a href="{{ site.parent_site.url }}">Amritesh.sec ↗</a></li>
+          <li><a href="{{ site.parent_site.url }}/research/cybersecurity/">Cybersecurity</a></li>
+          <li><a href="{{ site.parent_site.url }}/research/ai-security/">AI Security</a></li>
+          <li><a href="{{ site.parent_site.url }}/research/data-privacy/">Data Privacy</a></li>
+          <li><a href="{{ site.nordvault_url }}">NordVault Security ↗</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="{{ site.parent_site.url }}/disclaimer/">Disclaimer</a></li>
+          <li><a href="{{ site.parent_site.url }}/privacy/">Privacy Policy</a></li>
+          <li><a href="{{ site.parent_site.url }}/license/">License</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} Amritesh. Content licensed under <a href="{{ site.parent_site.url }}/license/">CC BY-NC-ND 4.0</a>.</p>
+      <p>All research for educational purposes only. <a href="{{ site.parent_site.url }}/disclaimer/">Full Disclaimer →</a></p>
+    </div>
+  </div>
+</footer>

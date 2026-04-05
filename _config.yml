@@ -1,0 +1,57 @@
+# ============================================================
+# OSINT & SOCIAL ENGINEERING — Content Repo
+# Part of amritesh-sec research hub
+# ============================================================
+
+title: "OSINT & Social Engineering | Amritesh"
+tagline: "Open Source Intelligence · Social Engineering · Human Attack Surfaces"
+description: "In-depth OSINT techniques, social engineering research, and human vulnerability analysis by Amritesh. Trusted by security professionals across US, UK, EU, and Nordic regions."
+author: "Amritesh"
+baseurl: "/osint-social-eng"
+url: "https://amritesh-sec.github.io"
+
+# --- PARENT SITE ---
+parent_site:
+  name: "Amritesh.sec"
+  url: "https://amritesh-sec.github.io"
+
+# --- BRAND ---
+nordvault_url: "https://nordvaultsec.github.io"
+
+# --- SEO ---
+lang: "en"
+timezone: "Europe/London"
+permalink: /:year/:month/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Amritesh"
+      category: "osint"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - TEMPLATE*.md

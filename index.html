@@ -1,0 +1,136 @@
+---
+layout: default
+title: "OSINT & Social Engineering | Amritesh"
+description: "In-depth research on open source intelligence techniques, social engineering attack patterns, and human vulnerability — by Amritesh. US, UK, EU & Nordic focus."
+---
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Part of amritesh-sec research hub</span>
+      </div>
+      <span class="hero-eyebrow">Research Repository</span>
+      <h1 class="hero-title">
+        <span class="accent">OSINT</span> &<br/>Social Engineering
+      </h1>
+      <p class="hero-desc">
+        Open source intelligence techniques, social engineering attack patterns,
+        and human vulnerability research — documented with precision, ethical boundaries,
+        and official references.
+      </p>
+      <div class="hero-cta">
+        <a href="#articles" class="btn-primary">Read Research</a>
+        <a href="{{ site.parent_site.url }}" class="btn-secondary">← Main Site</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="osint-map">
+        <p class="map-title">// osint_framework.map</p>
+        <div class="map-center">
+          <span class="map-core">OSINT Target</span>
+        </div>
+        <div class="map-branches">
+          <div class="map-node"><span class="node-dot"></span>Social Media</div>
+          <div class="map-node"><span class="node-dot"></span>Domain & DNS</div>
+          <div class="map-node"><span class="node-dot"></span>Email Footprint</div>
+          <div class="map-node"><span class="node-dot"></span>Public Records</div>
+          <div class="map-node"><span class="node-dot"></span>Image Metadata</div>
+          <div class="map-node"><span class="node-dot"></span>Breach Data</div>
+          <div class="map-node"><span class="node-dot"></span>Dark Web Intel</div>
+          <div class="map-node"><span class="node-dot"></span>Geolocation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="articles-section" id="articles">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Research & Articles</span>
+      <h2>Latest Publications</h2>
+      <p>All research includes official tool references, ethical boundaries, and real-world context.</p>
+    </div>
+
+    {% if site.posts.size > 0 %}
+    <div class="articles-grid">
+      {% for post in site.posts limit:6 %}
+      <article class="article-card">
+        {% if post.category %}<span class="article-cat">{{ post.category | upcase | replace: '-', ' ' }}</span>{% endif %}
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+        <div class="article-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+          {% if post.tags %}
+          <div class="article-tags">
+            {% for tag in post.tags limit:2 %}<span class="tag-sm">{{ tag }}</span>{% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div style="text-align:center;padding:3rem 0;">
+      <p style="font-family:var(--font-mono);color:var(--text-3);">$ ls _posts/ — first articles publishing soon</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<!-- TECHNIQUES OVERVIEW -->
+<section class="techniques-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Core Areas</span>
+      <h2>What This Repo Covers</h2>
+    </div>
+    <div class="techniques-grid">
+      <div class="technique-card">
+        <p class="technique-num">01 //</p>
+        <h3>Passive OSINT Reconnaissance</h3>
+        <p>Footprinting targets using entirely open sources — without touching the target. DNS, WHOIS, Shodan, Maltego, and more.</p>
+        <div class="technique-tags">
+          <span class="tag">Shodan</span><span class="tag">Maltego</span>
+          <span class="tag">WHOIS</span><span class="tag">theHarvester</span>
+        </div>
+      </div>
+      <div class="technique-card">
+        <p class="technique-num">02 //</p>
+        <h3>Social Media Intelligence (SOCMINT)</h3>
+        <p>Extracting intelligence from social platforms — metadata, geolocation signals, network mapping, and behavioural analysis.</p>
+        <div class="technique-tags">
+          <span class="tag">Twitter/X</span><span class="tag">LinkedIn</span>
+          <span class="tag">Instagram</span><span class="tag">Metadata</span>
+        </div>
+      </div>
+      <div class="technique-card">
+        <p class="technique-num">03 //</p>
+        <h3>Social Engineering Attack Patterns</h3>
+        <p>Phishing, vishing, pretexting, and spear phishing — how attackers build and execute human-targeted campaigns.</p>
+        <div class="technique-tags">
+          <span class="tag">Phishing</span><span class="tag">Vishing</span>
+          <span class="tag">Pretexting</span><span class="tag">BEC</span>
+        </div>
+      </div>
+      <div class="technique-card">
+        <p class="technique-num">04 //</p>
+        <h3>Human Risk & Defensive Awareness</h3>
+        <p>Why humans remain the most exploited attack vector — and what organisations can do to build genuine security culture.</p>
+        <div class="technique-tags">
+          <span class="tag">Human Risk</span><span class="tag">Security Culture</span>
+          <span class="tag">Awareness</span><span class="tag">ISO 27001</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
