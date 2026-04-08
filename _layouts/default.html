@@ -8,9 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="{{ '/osint-social-eng/assets/css/main.css' | absolute_url }}" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}" />
-  <link rel="icon" type="image/svg+xml" href="{{ '/osint-social-eng/assets/images/favicon.svg' | absolute_url }}" />
+ <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/images/favicon.svg" />
 
   <script type="application/ld+json">
   {
@@ -41,6 +41,6 @@
   {% include nav.html %}
   <main>{{ content }}</main>
   {% include footer.html %}
-  <script src="{{ '/osint-social-eng/assets/js/main.js' | absolute_url }}"></script>
+  <script src="{{ site.baseurl }}/assets/js/main.js"></script>
 </body>
 </html>
