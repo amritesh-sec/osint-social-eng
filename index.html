@@ -69,7 +69,7 @@ description: "In-depth research on open source intelligence techniques, social e
         <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
         {% if post.description %}<p>{{ post.description }}</p>{% endif %}
         <div class="article-meta">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+          <!-- <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time> -->
           {% if post.tags %}
           <div class="article-tags">
             {% for tag in post.tags limit:2 %}<span class="tag-sm">{{ tag }}</span>{% endfor %}
